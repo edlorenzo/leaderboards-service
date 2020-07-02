@@ -18,3 +18,4 @@
  `PUT /leaderboard/:_id/user/:user_id/add_score`
  `BONUS: Working dockerfile and docker-compose.yaml`
 
+Database Name: leaderboard
