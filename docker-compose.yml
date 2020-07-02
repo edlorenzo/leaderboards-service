@@ -1,0 +1,22 @@
+version: '3'
+services:
+    leaderboards-service:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - 8081:8081
+        environment:
+            DB_HOST: "${DB_HOST}"
+            DB_PORT: "${DB_PORT}"
+            DB_USER: "${DB_USER}"
+            DB_PASS: "${DB_PASS}"
+            DB_DBNAME: "${DB_DBNAME}"
+            APP_URL: "${APP_URL}"
+        networks:
+            default:
+                ipv4_address: 152.32.98.222
+networks:
+    default:
+        external:
+            name: leaderboard_network
